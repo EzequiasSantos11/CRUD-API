@@ -1,7 +1,7 @@
 import prismaClient from "../prisma";
 
 class CreateDosService{
-  async execute(title: string, description: string, deadline: string){
+  async execute(title, description, deadline){
     const tarefa = await prismaClient.tarefas.create({
       data:{
         title,

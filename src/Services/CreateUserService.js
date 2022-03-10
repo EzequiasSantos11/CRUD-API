@@ -10,9 +10,9 @@ import prismaClient from "../prisma";
 import {sign} from "jsonwebtoken";
 
 class CreateUserService{
-  async execute(email: string, password: string){
+  async execute(email, password){
 
-    let user: any = prismaClient.user.findFirst({
+    let user = prismaClient.user.findFirst({
       where:{
         email: email,
         password: password

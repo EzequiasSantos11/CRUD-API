@@ -2,9 +2,9 @@ import prismaClient from "../prisma";
 import { response } from "express";
 
 class UpDateDosService{
-  async execute( id, title: string, description: string, deadline: string){
+  async execute( id, title, description, deadline){
 
-    let user: any = prismaClient.tarefas.findFirst({
+    let user = prismaClient.tarefas.findFirst({
       where:{
         id: id,
       }
