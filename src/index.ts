@@ -21,4 +21,4 @@ app.use(express.json());
 app.use(router);
 
 
-app.listen(8080, ()=>console.log("Roading on PORT 8080 🚀🚀"))
+app.listen(process.env.PORT || 8080, ()=>console.log("Roading on PORT 8080 🚀🚀"))
